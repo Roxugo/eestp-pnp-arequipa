@@ -1048,6 +1048,76 @@ body {
 }
 
 /* ==========================================================================
+   SECCIÓN DE MAPA Y UBICACIÓN INTERACTIVA
+   ========================================================================== */
+.location-map-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-main);
+  border-top: 2px solid var(--gold-border);
+  overflow: hidden;
+  display: block;
+}
+
+.interactive-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  background-color: #061d12;
+  overflow: hidden;
+}
+
+.google-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: contrast(102%) brightness(98%);
+}
+
+/* Distintivo / Badge Flotante Superior Izquierdo */
+.map-floating-badge {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(3, 20, 12, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--gold-primary);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75), 0 0 12px var(--gold-glow);
+  pointer-events: none;
+  user-select: none;
+}
+
+.map-pin-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  filter: drop-shadow(0 1px 4px rgba(239, 68, 68, 0.6));
+}
+
+.map-pin-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.map-badge-text {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
    PIE DE PÁGINA (FOOTER SIMPLIFICADO)
    ========================================================================== */
 .site-footer {
@@ -1771,6 +1841,23 @@ body {
   .quick-contact-card {
     flex-direction: column;
     text-align: center;
+  }
+
+  .interactive-map-wrapper {
+    height: 300px;
+  }
+
+  .map-floating-badge {
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  .map-badge-text {
+    font-size: 10.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .floating-chat-container {
