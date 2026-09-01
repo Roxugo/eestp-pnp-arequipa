@@ -1075,11 +1075,12 @@ body {
   filter: contrast(102%) brightness(98%);
 }
 
-/* Distintivo / Badge Flotante Superior Izquierdo */
+/* Distintivo / Badge Flotante Superior Derecho */
 .map-floating-badge {
   position: absolute;
   top: 16px;
-  left: 20px;
+  right: 20px;
+  left: auto;
   z-index: 10;
   display: inline-flex;
   align-items: center;
@@ -1849,7 +1850,8 @@ body {
 
   .map-floating-badge {
     top: 10px;
-    left: 10px;
+    right: 10px;
+    left: auto;
     padding: 5px 10px;
     max-width: calc(100% - 20px);
   }
