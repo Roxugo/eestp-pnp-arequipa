@@ -735,6 +735,91 @@ body {
 }
 
 /* ==========================================================================
+   BANNER INSTITUCIONAL CON FONDO FIJO (PARALLAX EFFECT)
+   ========================================================================== */
+.fixed-background-banner {
+  position: relative;
+  width: 100%;
+  min-height: 290px;
+  background-image: url('assets/fondo-parallax.jpg');
+  background-attachment: fixed;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 85px 20px;
+  border-top: 2px solid var(--gold-border);
+  border-bottom: 2px solid var(--gold-border);
+  overflow: hidden;
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.85);
+}
+
+.fixed-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 22, 13, 0.82) 0%,
+    rgba(6, 29, 18, 0.62) 50%,
+    rgba(4, 22, 13, 0.86) 100%
+  );
+  z-index: 1;
+}
+
+.fixed-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.fixed-banner-tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.fixed-banner-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95), 0 0 25px rgba(0, 0, 0, 0.85);
+  margin-bottom: 8px;
+}
+
+.fixed-banner-divider {
+  width: 75px;
+  height: 3px;
+  background: var(--gold-gradient);
+  margin: 14px auto 16px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+.fixed-banner-subtitle {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--gold-bright);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* ==========================================================================
    GALERÍA DE FOTOS ESTÁTICA (2 FILAS X 3 COLUMNAS)
    ========================================================================== */
 .gallery-section {
@@ -1833,6 +1918,22 @@ body {
 
   .section-title-gold {
     font-size: 24px;
+  }
+
+  .fixed-background-banner {
+    min-height: 220px;
+    padding: 55px 16px;
+    background-attachment: scroll;
+    background-position: center 25%;
+  }
+
+  .fixed-banner-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .fixed-banner-subtitle {
+    font-size: 11.5px;
   }
 
   .gallery-grid {
